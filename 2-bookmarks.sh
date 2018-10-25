@@ -14,13 +14,6 @@ if [ -n "$DISPLAY" ]; then
     fi
     mv list.tmp  $HOME/.config/user-dirs.dirs
     
-    sed -i 's/\Documents//' "$HOME/.config/user-dirs.dirs"
-    sed -i 's/\Downloads//' "$HOME/.config/user-dirs.dirs"
-    sed -i 's/\Music//'     "$HOME/.config/user-dirs.dirs"
-    sed -i 's/\Pictures//'  "$HOME/.config/user-dirs.dirs"
-    sed -i 's/\Public//'    "$HOME/.config/user-dirs.dirs"
-    sed -i 's/\Templates//' "$HOME/.config/user-dirs.dirs"
-    sed -i 's/\Videos//'    "$HOME/.config/user-dirs.dirs"
 
     rm -fr "$HOME/Documents"
     rm -fr "$HOME/Downloads"
