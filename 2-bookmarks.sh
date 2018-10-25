@@ -6,6 +6,14 @@ if [ -n "$DISPLAY" ]; then
     echo "==> Remove nautilus bookmarks"
     echo "enabled=false" > "$HOME/.config/user-dirs.conf"
 
+
+    echo "XDG_DESKTOP_DIR="$HOME/Desktop"" > list.tmp
+    
+    if [ ! -e $HOME/.config/user-dirs.dirs.bak ]; then
+      cp $HOME/.config/user-dirs.dirs $HOME/.config/user-dirs.dirs.bak
+    fi
+    mv list.tmp  $HOME/.config/user-dirs.dirs
+    
     sed -i 's/\Documents//' "$HOME/.config/user-dirs.dirs"
     sed -i 's/\Downloads//' "$HOME/.config/user-dirs.dirs"
     sed -i 's/\Music//'     "$HOME/.config/user-dirs.dirs"
