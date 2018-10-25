@@ -7,7 +7,7 @@ if [ -n "$DISPLAY" ]; then
     echo "enabled=false" > "$HOME/.config/user-dirs.conf"
 
 
-    echo "XDG_DESKTOP_DIR="$HOME/Desktop"" > list.tmp
+    echo "XDG_DESKTOP_DIR=\"\$HOME/Desktop\"" > list.tmp
     
     if [ ! -e $HOME/.config/user-dirs.dirs.bak ]; then
       cp $HOME/.config/user-dirs.dirs $HOME/.config/user-dirs.dirs.bak
