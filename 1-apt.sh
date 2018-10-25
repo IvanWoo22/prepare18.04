@@ -17,6 +17,14 @@ deb http://mirrors.nju.edu.cn/ubuntu bionic-security main restricted universe mu
 
 EOF
 
+
+
+if [ ! -e /etc/apt/sources.list.bak ]; then
+    sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+fi
+sudo mv list.tmp /etc/apt/sources.list
+
+
 if [ "$(whoami)" == 'vagrant' ]; then
     echo "==> Disable AppArmor"
     sudo service apparmor stop
