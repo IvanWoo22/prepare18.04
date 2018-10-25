@@ -25,5 +25,5 @@ if [ -n "$DISPLAY" ]; then
 
 
 else
-    echo "This script should be execute inside a GUI terminal"
+    echo "==> This script should be execute inside a GUI terminal"
 fi
