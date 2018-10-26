@@ -48,3 +48,31 @@ else
 
 echo "==> Install CPANM"
 curl -L https://cpanmin.us | perl - App::cpanminus
+
+
+
+
+# other programming languages
+brew install lua node
+
+# download tools
+brew install aria2
+
+# gnu
+brew install gnu-sed gnu-tar
+
+# libs
+brew install berkeley-db gd gsl libffi libxml2 libxslt pcre readline yasm
+# brew link --force libffi
+
+# other tools
+brew install cloc cmake htop pandoc parallel pigz sqlite tree
+
+# Graphics
+brew install gnuplot imagemagick
+
+# weird dependancies by Cairo.pm
+# brew install linuxbrew/xorg/libpthread-stubs linuxbrew/xorg/renderproto linuxbrew/xorg/kbproto linuxbrew/xorg/xextproto
+
+# gtk+3
+brew install gsettings-desktop-schemas gtk+3 adwaita-icon-theme
