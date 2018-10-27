@@ -74,14 +74,14 @@ brew install lua node
 brew install aria2
 
 # gnu
-brew install gnu-sed gnu-tar
+brew install gnu-sed
 
 # libs
-brew install berkeley-db gd gsl libffi libxml2 libxslt pcre readline yasm
+brew install gsl libffi libxml2 libxslt pcre yasm
 # brew link --force libffi
 
 # other tools
-brew install cloc cmake htop pandoc parallel pigz sqlite tree
+brew install cloc cmake htop pandoc tree
 
 # Graphics
 brew install gnuplot imagemagick
