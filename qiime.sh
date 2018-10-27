@@ -13,6 +13,11 @@ do
 done
 
 
+echo '==> QIIME2 is installed successfully!'
+echo 'You can use it with:'
+echo '      source activate qiime2-2018.8'
+
+
 
 
 # OPTIONAL CLEANUP
