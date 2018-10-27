@@ -22,4 +22,6 @@ conda config --add channels https://mirrors.nju.edu.cn/anaconda/cloud/menpo/
 conda config --set show_channel_urls yes
 
 
+
 conda install r
+conda install rstudio

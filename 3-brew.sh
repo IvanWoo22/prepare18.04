@@ -11,6 +11,20 @@ test -r ~/.profile && echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/s
 source ~/.bashrc
 source ~/.profile
 
+
+if grep -q -i linuxbrew $HOME/.bashrc; then
+    echo "==> .bashrc already contains linuxbrew"
+else
+    echo "==> Update .bashrc"
+    echo >> $HOME/.bashrc
+    echo '# Linuxbrew' >> $HOME/.bashrc
+    echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >> $HOME/.bashrc
+    echo "export MANPATH='$(brew --prefix)/share/man'":'"$MANPATH"' >> $HOME/.bashrc
+    echo "export INFOPATH='$(brew --prefix)/share/info'":'"$INFOPATH"' >> $HOME/.bashrc
+    echo "export HOMEBREW_NO_ANALYTICS=1" >> $HOME/.bashrc
+    echo >> $HOME/.bashrc
+fi
+
 echo '==> Change a source of NJU'
 cd "$(brew --repo)"
 git remote set-url origin https://mirrors.nju.edu.cn/brew.git
@@ -18,11 +32,12 @@ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 git remote set-url origin https://mirrors.nju.edu.cn/homebrew-core.git
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.nju.edu.cn/homebrew-bottles' >> ~/.profile
 source ~/.profile
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
+source ~/.bash_profile
 
 brew update
 
-echo '==> Try to install a package'
-brew install hello
+
 
 
 # perl
