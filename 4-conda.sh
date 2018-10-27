@@ -5,7 +5,7 @@ echo '==> During this process, you will get the latest Python3 and R' && sleep 3
 echo '==> Downloading Miniconda3'
 wget -N http://mirrors.nju.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
-echo '==> Installing Miniconda3'
+echo '==> Install Miniconda3'
 sh Miniconda3-latest-Linux-x86_64.sh
 
 rm Miniconda3-latest-Linux-x86_64.sh
@@ -22,6 +22,12 @@ conda config --add channels https://mirrors.nju.edu.cn/anaconda/cloud/menpo/
 conda config --set show_channel_urls yes
 
 
-
+echo '==> Install R and Rstudio'
 conda install r
 conda install rstudio
+
+echo '==> If there are some errors during the downloads, please try again'
+echo 'with:'
+echo '     conda install r'
+echo 'or:'
+echo '     conda install rstudio'
